@@ -66,14 +66,14 @@
 }
 
 .card-fg {
-  background-color: #2b2b2b;
+  background: linear-gradient(90deg, #0162c8, #55e7fc);
 }
 .card-bg {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  background-color: #4285f4;
+  background: linear-gradient(90deg, #755bea, #ff72c0);
 }
 
 .card-bg {
