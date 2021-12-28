@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #4285f4;
+  height: 750px;
+  width: 750px;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #755bea, #ff72c0);
+  position: relative;
+  top: 100px;
+  animation: bounce 1200ms infinite;
+}
+
+@keyframes bounce {
+  0% {
+    height: 100px;
+    width: 100px;
+  }
+  25% {
+    height: 100px;
+    width: 75px;
+  }
+  50% {
+    height: 75px;
+    width: 125px;
+    transform: translateY(350px);
+  }
+  75% {
+    height: 100px;
+    width: 125px;
+  }
+  100% {
+    width: 100px;
+    width: 100px;
+    transform: translateY(0);
+  }
+}
+
+#box-shadow {
+  background-color: rgba(8, 8, 8, 0.05);
+  width: 100px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  top: 450px;
+  animation: bounce-shadow 1200ms linear infinite;
+}
+@keyframes bounce-shadow {
+  0% {
+    width: 100px;
+    height: 20px;
+  }
+  50% {
+    width: 50px;
+    height: 10px;
+  }
+  100% {
+    width: 100px;
+    height: 20px;
+  }
+}
