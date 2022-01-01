@@ -12,7 +12,7 @@
 }
 
 #base {
-  width: 60%;
+  width: 40%;
   border-bottom: 5px solid white;
   position: relative;
   animation: baseAnimation 2s linear infinite;
