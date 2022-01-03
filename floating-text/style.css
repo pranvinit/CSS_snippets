@@ -21,25 +21,16 @@
   text-align: center;
   font-size: 5em;
   letter-spacing: 0.45rem;
-  animation: float 5s linear infinite;
+  animation: float 5s linear infinite alternate;
   text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
     0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes float {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  25% {
+  from {
     transform: rotateZ(var(--rotate-angle));
   }
-  50% {
-    transform: rotateZ(0deg);
-  }
-  75% {
+  to {
     transform: rotateZ(calc(-1 * var(--rotate-angle)));
-  }
-  100% {
-    transform: rotateZ(0deg);
   }
 }
