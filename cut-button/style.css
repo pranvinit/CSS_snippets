@@ -51,7 +51,7 @@ span::before {
 #btn:hover span::before {
   width: 100%;
   background-color: #000;
-  transform: translate(-50%, -50%) rotate();
+  transform: translate(-50%, -50%) rotate(60deg);
 }
 #btn:hover {
   color: #fff;
