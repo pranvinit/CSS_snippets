@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script src="./index.js" defer></script>
+    <title>Animated Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="profile-form">
+        <div id="form-heading-container">
+          <span>Edit Profile</span>
+        </div>
+        <div id="input-container">
+          <span class="inputHeading">Username</span>
+          <p class="input-wrap">
+            <input
+              type="text"
+              name="username"
+              class="form-field username"
+              autocomplete="off"
+            />
+            <span id="username-span" class="effect"></span>
+          </p>
+          <span class="inputHeading">Password</span>
+          <p class="input-wrap">
+            <input
+              type="password"
+              name="password"
+              class="form-field password"
+            />
+            <span id="password-span" class="effect"></span>
+          </p>
+        </div>
+        <div id="btn-container">
+          <button class="btn cancel-btn">Cancel</button>
+          <button class="btn submit-btn">Done</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
