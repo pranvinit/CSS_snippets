@@ -186,6 +186,9 @@ body {
 /* tab design */
 
 @media (min-width: 40em) and (max-width: 55em) {
+  body {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+  }
   .primary-navigation a > span[aria-hidden="true"] {
     display: none;
   }
