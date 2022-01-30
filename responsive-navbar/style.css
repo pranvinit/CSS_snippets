@@ -1,0 +1,201 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utility classes */
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.flex {
+  display: flex;
+  /* --gap is undefined property */
+  gap: var(--gap, 1rem);
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* utility classes end */
+
+/* css starts */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+body {
+  background: url("./assets/home/background-home-desktop.jpg") center center /
+    cover;
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.logo {
+  margin: 2rem;
+}
+
+/* header class */
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+/* ul class */
+.primary-navigation {
+  background: hsl(0 0% 0%/ 0.75);
+}
+/* checking support for backdrop filter */
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: hsl(0 0% 100%/ 0.1);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  font-size: clamp(0.95, 20px, 1.15rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.primary-navigation a > [aria-hidden="true"] {
+  font-weight: 700;
+  margin-inline-end: 0.75em;
+}
+
+/* mobile design */
+@media (max-width: 40em) {
+  body {
+    background-image: url("./assets/home/background-home-mobile.jpg");
+  }
+  #primary-navigation {
+    /* sets the gap variable globally */
+    --gap: 2rem;
+    position: fixed;
+    z-index: 100;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+    transform: translateX(100%);
+    transition: transform 250ms ease-out;
+  }
+  /* using custom data attribute to add dynamic style */
+  #primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  .mobile-nav-toggle {
+    display: block;
+    border: 0;
+    position: absolute;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+    z-index: 999;
+    background: url("./assets/shared/icon-hamburger.svg") no-repeat;
+  }
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(./assets/shared/icon-close.svg);
+  }
+}
+/* tab design */
+
+@media (min-width: 40em) and (max-width: 55em) {
+  .primary-navigation a > span[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+/* wide-screen only */
+@media (min-width: 40em) {
+  #primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3rem);
+    padding-block: 2rem;
+    padding-inline: clamp(3rem, 5vw, 10rem);
+  }
+}
