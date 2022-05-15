@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  height: 60vh;
+  width: 30vw;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateX(0deg) rotateY();
+  transform-style: preserve-3d;
+  perspective: 1000;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.card-text {
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: default;
+}
+
+/* 3D tilt classes */
+.tl {
+  transform: rotateX(-20deg) rotateY(20deg);
+}
+.tc {
+  transform: rotateX(-20deg) rotateY(0deg);
+}
+.tr {
+  transform: rotateX(-20deg) rotateY(-20deg);
+}
+.cl {
+  transform: rotateX(0deg) rotateY(20deg);
+}
+.cc {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+.cr {
+  transform: rotateX(0deg) rotateY(-20deg);
+}
+.bl {
+  transform: rotateX(20deg) rotateY(20deg);
+}
+.bc {
+  transform: rotateX(20deg) rotateY(0deg);
+}
+.br {
+  transform: rotateX(20deg) rotateY(-20deg);
+}

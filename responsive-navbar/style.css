@@ -126,7 +126,7 @@ body {
 }
 /* ul class */
 .primary-navigation {
-  background: hsl(0 0% 0%/ 0.75);
+  background: #000000bf;
 }
 /* checking support for backdrop filter */
 @supports (backdrop-filter: blur(1rem)) {
@@ -177,7 +177,9 @@ body {
     top: 2rem;
     right: 2rem;
     z-index: 999;
-    background: url("./assets/shared/icon-hamburger.svg") no-repeat;
+    background: url("./assets/shared/icon-hamburger.svg") center center
+      no-repeat;
+    cursor: pointer;
   }
   .mobile-nav-toggle[aria-expanded="true"] {
     background-image: url(./assets/shared/icon-close.svg);
