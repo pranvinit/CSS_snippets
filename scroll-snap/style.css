@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* changing default scrollbar */
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cccccc;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.content {
+  height: 600px;
+  width: 600px;
+  padding: 20px;
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  /* flex-direction: column; */
+  gap: 100px;
+  /* align-items: center; */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  box-sizing: border-box;
+  flex: none;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  scroll-snap-align: start;
+  scroll-margin-left: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.card span {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* for vertical snap */
+.contentVertical {
+  flex-direction: column;
+  align-items: center;
+  overflow: initial;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.contentVertical .card {
+  scroll-margin-top: 20px;
+}
