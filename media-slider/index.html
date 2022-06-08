@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Slider</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="carousel">
+        <button class="carousel__button carousel__button--left">
+          <img src="media/assets/arrow.svg" alt="" />
+        </button>
+        <div class="carousel__track-container">
+          <ul class="carousel__track">
+            <li class="carousel__slide current-slide">
+              <img src="media/images/1.jpg" class="carousel__image" alt="" />
+            </li>
+            <li class="carousel__slide">
+              <img src="media/images/2.jpg" class="carousel__image" alt="" />
+            </li>
+            <li class="carousel__slide">
+              <img src="media/images/3.jpg" class="carousel__image" alt="" />
+            </li>
+            <li class="carousel__slide">
+              <img src="media/images/4.jpg" class="carousel__image" alt="" />
+            </li>
+            <li class="carousel__slide">
+              <img src="media/images/5.jpg" class="carousel__image" alt="" />
+            </li>
+          </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+          <img src="media/assets/arrow.svg" alt="" />
+        </button>
+        <div class="carousel__nav">
+          <button class="carousel__indicator current-dot"></button
+          ><button class="carousel__indicator"></button
+          ><button class="carousel__indicator"></button
+          ><button class="carousel__indicator"></button
+          ><button class="carousel__indicator"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
