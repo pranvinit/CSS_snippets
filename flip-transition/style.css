@@ -39,6 +39,8 @@
   cursor: pointer;
   overflow: hidden;
   padding: 20px;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
 .card-fg span,
