@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const content = document.querySelector(".content");
+const progressPercent = document.querySelector(".progress");
 
 const progressBar = document.querySelector(".progress-bar");
 
@@ -15,6 +16,7 @@ const getScrollPercent = () => {
   const progress = Math.min(100, Math.max(0, percentage));
 
   progressBar.style.width = !scrollTop ? 0 : `${progress}%`;
+  progressPercent.innerText = !scrollTop ? "" : `${progress}% complete`;
 };
 
 window.addEventListener("scroll", getScrollPercent);
